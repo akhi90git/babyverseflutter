@@ -3,39 +3,69 @@ package forgotPin;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class ForgotPin extends StoryScreen {
+public class ForgotPin extends CapabalitiesDirect {
 
-	@Test(priority = 2, testName = "Enter Mobile Number and Continue")
-	public void loginScreen() throws InterruptedException {
+//	@Test(priority = 2)
+	public void selectMobileNumberfromPopup() throws InterruptedException {
+
+		explicitwait1();
+	
+		// Select mobile number form mobile picker
+		explicitwait1();
+		try {
+			if (driver.findElementById("com.google.android.gms:id/credential_picker_layout").isDisplayed()) {
+				driver.findElementById("com.google.android.gms:id/credential_primary_label").click();
+			}
+		} catch (Exception e) {
+			System.out.println("Popup Not Found");
+		}
 
 		explicitwait1();
 
-		driver.findElementByXPath("//android.widget.EditText[@index='4']").click();
-		driver.findElementByXPath("//android.widget.EditText[@index='4']").sendKeys("8485844269");
-
-		driver.hideKeyboard();
-
-		WebElement continuebutton = driver.findElementByAccessibilityId("Continue");
-		continuebutton.click();
+		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
 
 	}
 
-	@Test(priority = 3)
+
+//	@Test(priority = 3)
 	public void clickOnFogotonLogin() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElementByAccessibilityId("Forgot PIN?").click();
+		driver.findElementByXPath("//android.view.View[@index='8']").click();
+
+	}
+	
+//	@Test(priority = 4)
+	public void selectMobileNumberfromPopup2() throws InterruptedException {
+
+		explicitwait1();
+	
+		// Select mobile number form mobile picker
+		explicitwait1();
+		try {
+			if (driver.findElementById("com.google.android.gms:id/credential_picker_layout").isDisplayed()) {
+				driver.findElementById("com.google.android.gms:id/credential_primary_label").click();
+			}
+		} catch (Exception e) {
+			System.out.println("Popup Not Found");
+		}
+
+		explicitwait1();
+
+		driver.findElementByXPath("//android.widget.Button[@index='1']").click();
 
 	}
 
-	@Test(priority = 4, testName = "Country Code")
+
+//	@Test(priority = 5, testName = "Country Code")
 	public void clickOnCountryCode() throws IOException, InterruptedException {
 
 		explicitwait1();
@@ -50,7 +80,7 @@ public class ForgotPin extends StoryScreen {
 
 	}
 
-	 @Test(priority = 5)
+//	 @Test(priority = 6)
 	public void mobileemptyValidation() throws InterruptedException {
 
 		 explicitwait1();
@@ -71,7 +101,7 @@ public class ForgotPin extends StoryScreen {
 		}
 	}
 	
-	@Test(priority = 6)
+//	@Test(priority = 7)
 	public void nonRegisterNumber() throws InterruptedException {
 
 		explicitwait1();
@@ -96,29 +126,25 @@ public class ForgotPin extends StoryScreen {
 		driver.findElementByAccessibilityId("Send OTP").click();
 	}
 	
-	@Test(priority = 7)
-	public void enterOTP() throws InterruptedException {
+	@Test(priority = 8)
+	public void clickandEnterOTP() throws InterruptedException {
 
 		explicitwait1();
 
-		WebElement proceed = driver.findElementByAccessibilityId("Proceed");
-
+		// Enter otp
 		AndroidTouchAction touch = new AndroidTouchAction(driver);
-		touch.press(PointOption.point(303,1290)).release().perform();
-		
-		explicitwait1();
-		for(int i=1; i<5;i++) {
-			touch.press(PointOption.point(409,2167)).release().perform();
-		}
-		
-		explicitwait1();
+		touch.press(PointOption.point(303, 1309)).release().perform();
+		 explicitwait1();
+
+
 		driver.hideKeyboard();
 
-		proceed.click();
+		implicitwait();
+	//	driver.findElementByXPath("//android.widget.Button[@index='7']").click();
 
-	}
-	
-	@Test(priority = 8)
+		// driver.quit();
+	}	
+//	@Test(priority = 9)
 	public void clickOnPin() throws InterruptedException {
 		explicitwait1();
 		
@@ -132,8 +158,7 @@ public class ForgotPin extends StoryScreen {
 		
 		explicitwait1();
 	}	
-	
-	@Test(priority = 9)
+//	@Test(priority = 10)
 	public void clickOnConfirmPin() throws InterruptedException {
 		
 		explicitwait1();
@@ -172,4 +197,13 @@ public class ForgotPin extends StoryScreen {
 
 	}
 
+	public void click_Zero() throws InterruptedException {
+		AndroidTouchAction touch = new AndroidTouchAction(driver);
+
+		for (int i = 0; i <= 3; i++) {
+			Thread.sleep(500);
+			touch.press(PointOption.point(409, 2175)).release().perform();
+		}
+
+	}
 }
