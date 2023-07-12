@@ -60,7 +60,7 @@ public class NametoDisclamer extends MobileAndPin {
 		Assert.assertEquals(validation, "Please Enter Valid Email");
 	}
 
-	@Test(priority = 19)
+	@Test(priority = 20)
 	public void addEmailId() throws InterruptedException {
 		explicitwait1();
 
@@ -78,7 +78,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 20)
+	@Test(priority = 21)
 	public void clickonBabyontheWay() throws InterruptedException {
 
 		explicitwait1();
@@ -87,7 +87,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-//	@Test(priority = 21)
+//	@Test(priority = 22)
 	public void clickonHint() throws InterruptedException {
 
 		explicitwait1();
@@ -100,7 +100,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 22)
+	@Test(priority = 23)
 	public void selectdateOfBirth() throws InterruptedException {
 
 		explicitwait1();
@@ -174,7 +174,7 @@ public class NametoDisclamer extends MobileAndPin {
 		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
 	}
 
-	@Test(priority = 23)
+	@Test(priority = 24)
 	public void clickOnRelation() throws InterruptedException {
 
 		explicitwait1();
@@ -184,7 +184,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 24)
+	@Test(priority = 25)
 	public void neverMissaMilestone() throws InterruptedException {
 
 		explicitwait1();
@@ -193,7 +193,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 	
-	@Test(priority = 25)
+	@Test(priority = 26)
 	public void planScreen() throws InterruptedException {
 		explicitwait1();
 
@@ -209,7 +209,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 26)
+	@Test(priority = 27)
 	public void notificationReminder() throws InterruptedException {
 		explicitwait();
 		try {
@@ -228,7 +228,7 @@ public class NametoDisclamer extends MobileAndPin {
 		}
 	}
 	
-	@Test(priority = 27)
+	@Test(priority = 28)
 	public void clickonDisclaimer() throws InterruptedException {
 
 		explicitwait();

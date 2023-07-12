@@ -49,12 +49,14 @@ public class MobileAndPin extends StoryScreen {
 
 		explicitwait();
 
+		//Change it to Xpath	
 		driver.findElementByAccessibilityId("Terms & Conditions").click();
 
 		explicitwait();
 
 		driver.navigate().back();
 
+		//Change it to Xpath
 		driver.findElementByAccessibilityId("Privacy Policy").click();
 
 		explicitwait();
@@ -191,6 +193,7 @@ public class MobileAndPin extends StoryScreen {
 
 	@Test(priority = 14)
 	public void emptyPinValidation() throws InterruptedException {
+		//Continue button click
 		driver.findElementByXPath("//android.widget.Button[@index='7']").click();
 
 		explicitwait1();

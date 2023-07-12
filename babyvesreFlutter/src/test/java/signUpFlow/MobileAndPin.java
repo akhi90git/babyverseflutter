@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidTouchAction;
@@ -253,7 +254,14 @@ public class MobileAndPin extends StoryScreen {
 			System.out.println("Oh, the pins dont match up! Can you enter the pin once again? not Matched");
 		}
 		
+		Assert.assertEquals(validation, "Oh, the pins dont match up! Can you enter the pin once again?");
+	}
+	
+	@Test(priority = 16)
+	public void addvalidConfimpin() throws InterruptedException {
 		explicitwait1();
+		
+		AndroidTouchAction touch = new AndroidTouchAction(driver);
 		
 		// Clear confirm pin block
 		touch.press(PointOption.point(817, 1636)).release().perform();

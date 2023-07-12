@@ -8,6 +8,7 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidTouchAction;
@@ -128,13 +129,15 @@ public class LoginScreen extends StoryScreen {
 
 		String validation = driver.findElementByAccessibilityId(" Please enter your 4-digit PIN")
 				.getAttribute("content-desc");
-		System.out.println(validation);
-		if (validation.equals(" Please enter your 4-digit PIN")) {
-			System.out.println("Empty PIN validation Matched");
-		} else {
-			System.out.println("Empty PIN validation not Matched");
-		}
+//		System.out.println(validation);
+//		if (validation.equals(" Please enter your 4-digit PIN")) {
+//			System.out.println("Empty PIN validation Matched");
+//		} else {
+//			System.out.println("Empty PIN validation not Matched");
+//		}
 
+		Assert.assertEquals(validation, " Please enter your 4-digit PIN");
+		
 	}
 
 	@Test(priority = 5)
@@ -164,6 +167,8 @@ public class LoginScreen extends StoryScreen {
 		} else {
 			System.out.println("Wrong PIN validation not Matched");
 		}
+		
+		Assert.assertEquals(validation, "Hmm, the pin doesn't match. Want to try out the pin once again?");
 
 		explicitwait1();
 		driver.findElementByAccessibilityId("OK").click();
