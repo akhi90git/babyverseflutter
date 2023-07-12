@@ -340,6 +340,25 @@ public class NametoDisclamer extends MobileAndPin {
 	}
 	
 	@Test(priority = 30)
+	public void notificationReminder() throws InterruptedException {
+		explicitwait();
+		try {
+			
+			if(driver.findElementByAccessibilityId("Get timely reminders").isDisplayed()) {
+				explicitwait1();
+			//	System.out.println("Yaha tak aaya");
+				driver.findElementByAccessibilityId("Yes, Notify me").click();
+				explicitwait1();
+				driver.findElementById("com.android.permissioncontroller:id/permission_allow_button").click();
+				
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Notification Reminder screen not found");
+		}
+	}
+	
+	@Test(priority = 31)
 	public void clickonDisclaimer() throws InterruptedException {
 
 		explicitwait();

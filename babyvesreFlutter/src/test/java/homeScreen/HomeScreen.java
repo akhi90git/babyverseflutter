@@ -9,61 +9,28 @@ import org.testng.annotations.Test;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HomeScreen extends NoResetCapabalities {
+public class HomeScreen extends CapabalitiesDirect {
 
-	@Test(priority = 2, testName = "Screen 1")
-	public void walkthroughscreen1() throws InterruptedException {
-
-		explicitwait1();
-
-		try {
-			String gettext = driver.findElementByXPath("//android.view.View[@index='2']").getAttribute("content-desc");
-
-			System.out.println(gettext);
-
-			if (gettext.equals("Welcome")) {
-				implicitwait();
-
-				driver.findElementByXPath("//android.widget.Button[@index='5']").click();
-
-				implicitwait();
-
-				driver.findElementByXPath("//android.widget.Button[@index='4']").click();
-
-				implicitwait();
-
-				driver.findElementByXPath("//android.widget.Button[@index='4']").click();
-
-				Thread.sleep(20000);
-			} 
-			else {
-
-				implicitwait();
-
-				driver.findElementByXPath("//android.widget.Button[@index='5']").click();
-
-				Thread.sleep(7000);
-			}
-		} catch (Exception e) {
-			System.out.println("Walk Through not found");
-		}
-
-		// driver.quit();
-
-		implicitwait();
-
-	}
-
-	@Test(priority = 3)
+//	@Test(priority = 2)
 	public void clickOnHomeTab() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElementByAccessibilityId("Home").click();
+		// driver.findElementByAccessibilityId("Home").click();
+
+		List<WebElement> names = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
+		// System.out.println(names.size());
+//		for (int i = 0; i < names.size(); i++) {
+//			System.out.println(names.get(i).getAttribute("content-desc"));
+//			//Thread.sleep(8000);
+//			//driver.navigate().back();
+//		}
+
+		names.get(5).click();
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void clickOnExpert() throws InterruptedException {
 		explicitwait1();
 
@@ -76,7 +43,7 @@ public class HomeScreen extends NoResetCapabalities {
 		// driver.quit();
 	}
 
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	public void clickOnSetting() throws InterruptedException {
 		explicitwait1();
 
@@ -96,7 +63,7 @@ public class HomeScreen extends NoResetCapabalities {
 		scrollLeft();
 	}
 
-	@Test(priority = 6)
+//	@Test(priority = 6)
 	public void clickonActvityonCarousel() throws InterruptedException {
 		explicitwait1();
 
@@ -111,7 +78,7 @@ public class HomeScreen extends NoResetCapabalities {
 
 	}
 
-	@Test(priority = 7)
+//	@Test(priority = 7)
 	public void layoutEverythingButtonClick() throws InterruptedException {
 		explicitwait1();
 
@@ -128,7 +95,7 @@ public class HomeScreen extends NoResetCapabalities {
 
 	}
 
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	public void layoutSpeciallyButtonClick() throws InterruptedException {
 
 //		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Specially Curated For You!\").instance(0))");
@@ -148,7 +115,7 @@ public class HomeScreen extends NoResetCapabalities {
 		}
 	}
 
-	@Test(priority = 9)
+//	@Test(priority = 9)
 	public void layoutParentsButtonClick() throws InterruptedException {
 		explicitwait();
 		scrollScreenUp80();
@@ -169,6 +136,8 @@ public class HomeScreen extends NoResetCapabalities {
 		driver.quit();
 
 	}
+
+//------------------------------------------------------------------------------------------------------------------------------------	
 
 	public void implicitwait() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

@@ -33,6 +33,8 @@ public class CapabalitiesDirect {
 //		dc.setCapability("appActivity", "com.app.babybot.MainActivity");
 //
 //		 dc.setCapability("autoGrantPermissions", "true");
+		
+//		dc.setCapability("noReset", "true");
 
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
