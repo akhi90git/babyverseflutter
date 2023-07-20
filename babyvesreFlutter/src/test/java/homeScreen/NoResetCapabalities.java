@@ -24,9 +24,9 @@ public class NoResetCapabalities {
 					
 						dc.setCapability("platformName", "Android");
 					
-						dc.setCapability("platformVersion", "13.0");
+						dc.setCapability("platformVersion", "10.0");
 					
-						dc.setCapability("deviceName", "RZ8T81PTRKN");
+						dc.setCapability("deviceName", "9bd08399");
 				
 						dc.setCapability("noReset", "true");
 						

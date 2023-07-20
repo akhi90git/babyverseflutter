@@ -8,6 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class HomeScreen extends CapabalitiesDirect {
@@ -174,15 +177,19 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	}
 
-	@Test(priority = 7)
+//	@Test(priority = 7)
 	public void layoutEverythingButtonClick() throws InterruptedException {
+		
+		scrollScreenUp40();
+		
 		explicitwait1();
-
+		
 		List<WebElement> names = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
 	int sizecheck = names.size() - 1;
 		System.out.println(names.size());
 		
-		for (int i = 2; i < sizecheck; i++) {
+		for (int i = 1; i < sizecheck; i++) {
+			explicitwait1();
 			System.out.println(names.get(i).getAttribute("content-desc"));
 			names.get(i).click();
 			explicitwait();
@@ -190,6 +197,26 @@ public class HomeScreen extends CapabalitiesDirect {
 			
 			//driver.quit();
 		}
+	}	
+		
+	//@Test(priority = 7)
+		public void layoutEverything2ButtonClick() throws InterruptedException {
+			explicitwait1();
+
+			List<AndroidElement> title1stLayout =  driver.findElementsByXPath("//android.widget.ImageView[@index = '0']");
+		int sizecheck = title1stLayout.size() - 1;
+			System.out.println(title1stLayout.size());
+			
+			for (int i = 2; i < sizecheck; i++) {
+				//title1stLayout.get(i).click();
+				
+				System.out.println(title1stLayout.get(i).getAttribute("content-desc"));
+				explicitwait1();
+//				title1stLayout.get(i).click();
+//				explicitwait();
+//				driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+				
+			}
 
 //		for (int i = 2; i < sizecheck; i++) {
 //			System.out.println(names.get(i).getAttribute("content-desc"));
@@ -200,7 +227,7 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	}
 
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	public void layoutSpeciallyButtonClick() throws InterruptedException {
 
 //		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Specially Curated For You!\").instance(0))");
@@ -234,18 +261,28 @@ public class HomeScreen extends CapabalitiesDirect {
 	@Test(priority = 9)
 	public void layoutParentsButtonClick() throws InterruptedException {
 		explicitwait();
-		scrollScreenUp80();
+	//	scrollScreenUp80();
 		// scrollScreenUp80();
 
 		List<WebElement> names3 = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
-		int sizecheck3 = names3.size()-1;
+		int sizecheck3 = names3.size();
 		System.out.println(sizecheck3);
 
-		for (int i = 6; i < sizecheck3; i++) {
+		for (int i = 0; i < sizecheck3; i++) {
 			System.out.println(names3.get(i).getAttribute("content-desc"));
+			if(names3.get(i).getAttribute("content-desc").equals("Join the community"))
+			{
+				names3.get(i).click();
+				Thread.sleep(10000);
+				driver.navigate().back();
+				explicitwait1();
+				//driver.navigate().back();
+			}
+			else {
 			names3.get(i).click();
 			explicitwait();
 			driver.navigate().back();
+			}
 		}
 
 		explicitwait();
@@ -266,6 +303,27 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	}
 
+	public void scrollScreenUp40() throws InterruptedException {
+
+		explicitwait();
+
+		// The viewing size of the device
+		org.openqa.selenium.Dimension size = driver.manage().window().getSize();
+
+		// Starting y location set to 80% of the height (near bottom)
+		int starty = (int) (size.height * 0.40);
+		// Ending y location set to 20% of the height (near top)
+		int endy = (int) (size.height * 0.10);
+		// x position set to mid-screen horizontally
+		int startx = (int) size.width / 2;
+
+		TouchAction touchAction = new TouchAction(driver);
+
+		touchAction.longPress(PointOption.point(startx, starty)).moveTo(PointOption.point(startx, endy)).release()
+				.perform();
+
+	}
+	
 	public void scrollScreenUp80() throws InterruptedException {
 
 		explicitwait();
