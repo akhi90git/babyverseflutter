@@ -187,6 +187,8 @@ public class HomeScreen extends CapabalitiesDirect {
 			names.get(i).click();
 			explicitwait();
 			driver.navigate().back();
+			
+			//driver.quit();
 		}
 
 //		for (int i = 2; i < sizecheck; i++) {
