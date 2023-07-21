@@ -13,9 +13,9 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HomeScreen extends CapabalitiesDirect {
+public class HomeScreen extends NoResetCapabalities {
 
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	public void clickOnHomeTab() throws InterruptedException {
 
 		explicitwait1();
@@ -40,10 +40,10 @@ public class HomeScreen extends CapabalitiesDirect {
 		explicitwait1();
 
 		List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='1']");
-		System.out.println(data.size());
-		for (int i = 0; i < data.size(); i++) {
-			System.out.println(data.get(i).getAttribute("content-desc"));
-		}
+//		System.out.println(data.size());
+//		for (int i = 0; i < data.size(); i++) {
+//			System.out.println(data.get(i).getAttribute("content-desc"));
+//		}
 
 		explicitwait1();
 
@@ -62,8 +62,8 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	}
 
-//	@Test(priority = 4)
-	public void clickOnUpgrade() throws InterruptedException {
+	@Test(priority = 4)
+	public void clickOnUpgradeIcon() throws InterruptedException {
 		explicitwait1();
 
 		// Will found upgrade button and check that redirect to paywall
@@ -76,37 +76,37 @@ public class HomeScreen extends CapabalitiesDirect {
 //				System.out.println(data.get(i).getAttribute("content-desc"));
 //			}
 			data.get(0).click();
-			explicitwait1();
-									try {
-										List<WebElement> data2 = driver.findElementsByXPath("//android.view.View[@index='2']");
-						//						System.out.println(data2.size());
-						//						for (int i = 0; i < data2.size(); i++) {
-						//							System.out.println(data2.get(i).getAttribute("content-desc"));
-						//						}
-						
-										Assert.assertEquals(data2.get(0).getAttribute("content-desc"), "Upgrade to Premium");
-										explicitwait1();
-										driver.navigate().back();
-									} catch (Exception e) {
-										System.out.println("Paywall not found");
-										driver.navigate().back();
-									}
+			explicitwait();
+			try {
+				List<WebElement> data2 = driver.findElementsByXPath("//android.view.View[@index='2']");
+				// System.out.println(data2.size());
+				// for (int i = 0; i < data2.size(); i++) {
+				// System.out.println(data2.get(i).getAttribute("content-desc"));
+				// }
 
-		} catch (Exception e) {
-			System.out.println("Upgrade button not found");
-		}
-
-		try {
-
-			List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
-			System.out.println(data.size());
-			for (int i = 0; i < data.size(); i++) {
-				System.out.println(data.get(i).getAttribute("content-desc"));
+				Assert.assertEquals(data2.get(0).getAttribute("content-desc"), "Upgrade to Premium");
+				explicitwait1();
+				driver.navigate().back();
+			} catch (Exception e) {
+				System.out.println("Paywall not found");
+				driver.navigate().back();
 			}
 
 		} catch (Exception e) {
 			System.out.println("Upgrade button not found");
 		}
+
+//		try {
+//
+//			List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
+//			System.out.println(data.size());
+//			for (int i = 0; i < data.size(); i++) {
+//				System.out.println(data.get(i).getAttribute("content-desc"));
+//			}
+//
+//		} catch (Exception e) {
+//			System.out.println("Upgrade button not found");
+//		}
 
 		explicitwait1();
 
@@ -127,12 +127,12 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	}
 
-//	@Test(priority = 4)
+	@Test(priority = 5)
 	public void clickOnSetting() throws InterruptedException {
 		explicitwait1();
 
 		List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
-		System.out.println(data.size());
+//		System.out.println(data.size());
 //		for (int i = 0; i < data.size(); i++) {
 //			System.out.println(names.get(i).getAttribute("content-desc"));
 //			//Thread.sleep(8000);
@@ -140,17 +140,12 @@ public class HomeScreen extends CapabalitiesDirect {
 //		}
 		data.get(1).click();
 
-//		try {
-//			if(driver.findElementByXPath("//android.widget.ImageView[@index='2']").isDisplayed()) {
-//				driver.findElementByXPath("//android.widget.ImageView[@index='2']").click();
-//			}
-//		} catch (Exception e) {
-//			System.out.println("Not found");
-//		}
-
-		// explicitwait();
-
-		// driver.navigate().back();
+		explicitwait();
+		
+		Assert.assertEquals(driver.findElementByXPath("//android.view.View[@index='2']").getAttribute("content-desc"), "Profile");
+			
+		explicitwait();
+		 driver.navigate().back();
 
 	}
 
@@ -159,7 +154,10 @@ public class HomeScreen extends CapabalitiesDirect {
 
 		explicitwait1();
 
+		for(int i=0;i<=9;i++) {
 		scrollLeft();
+		System.out.println(i);
+		}
 	}
 
 //	@Test(priority = 6)
@@ -179,51 +177,28 @@ public class HomeScreen extends CapabalitiesDirect {
 
 //	@Test(priority = 7)
 	public void layoutEverythingButtonClick() throws InterruptedException {
-		
-		scrollScreenUp40();
-		
-		explicitwait1();
-		
-		List<WebElement> names = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
-	int sizecheck = names.size() - 1;
-		System.out.println(names.size());
-		
-		for (int i = 1; i < sizecheck; i++) {
-			explicitwait1();
-			System.out.println(names.get(i).getAttribute("content-desc"));
-			names.get(i).click();
-			explicitwait();
-			driver.navigate().back();
-			
-			//driver.quit();
-		}
-	}	
-		
-	//@Test(priority = 7)
-		public void layoutEverything2ButtonClick() throws InterruptedException {
-			explicitwait1();
 
-			List<AndroidElement> title1stLayout =  driver.findElementsByXPath("//android.widget.ImageView[@index = '0']");
-		int sizecheck = title1stLayout.size() - 1;
-			System.out.println(title1stLayout.size());
-			
-			for (int i = 2; i < sizecheck; i++) {
-				//title1stLayout.get(i).click();
-				
-				System.out.println(title1stLayout.get(i).getAttribute("content-desc"));
+		scrollScreenUp40();
+
+		explicitwait1();
+
+		List<WebElement> names = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
+		// int sizecheck = names.size();
+		System.out.println(names.size());
+		try {
+
+			for (int i = 1; i < names.size() - 1; i++) {
 				explicitwait1();
-//				title1stLayout.get(i).click();
-//				explicitwait();
-//				driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
-				
+				System.out.println(names.get(i).getAttribute("content-desc"));
+				names.get(i).click();
+				explicitwait();
+				driver.navigate().back();
+
 			}
 
-//		for (int i = 2; i < sizecheck; i++) {
-//			System.out.println(names.get(i).getAttribute("content-desc"));
-//			names.get(i).click();
-//			Thread.sleep(8000);
-//			driver.navigate().back();
-//		}
+		} catch (Exception e) {
+			System.out.println("Array not found");
+		}
 
 	}
 
@@ -236,61 +211,107 @@ public class HomeScreen extends CapabalitiesDirect {
 		scrollScreenUp80();
 
 		List<WebElement> names2 = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
-		int sizecheck2 = names2.size()-1;
+		int sizecheck2 = names2.size() - 1;
 		System.out.println(sizecheck2);
 
-		for (int i = 2; i < sizecheck2; i++) {
-			System.out.println(names2.get(i).getAttribute("content-desc"));
-						if(names2.get(i).getAttribute("content-desc").equals("Join the community"))
-						{
-							names2.get(i).click();
-							Thread.sleep(10000);
-							driver.navigate().back();
-							explicitwait1();
-							driver.navigate().back();
-						}
-						else {
-						names2.get(i).click();
-						explicitwait();
-						driver.navigate().back();
-						}
-			
+		try {
+
+			for (int i = 2; i < sizecheck2; i++) {
+				System.out.println(names2.get(i).getAttribute("content-desc"));
+				if (names2.get(i).getAttribute("content-desc").equals("Join the community")) {
+					names2.get(i).click();
+					Thread.sleep(10000);
+					driver.navigate().back();
+					explicitwait1();
+					driver.navigate().back();
+				} else {
+					names2.get(i).click();
+					explicitwait();
+					driver.navigate().back();
+				}
+
+			}
+
+		} catch (Exception e) {
+			System.out.println("Array not found");
 		}
+
 	}
 
-	@Test(priority = 9)
+//	@Test(priority = 9)
 	public void layoutParentsButtonClick() throws InterruptedException {
 		explicitwait();
-	//	scrollScreenUp80();
-		// scrollScreenUp80();
+		scrollScreenUp80();
+		scrollScreenUp80();
 
 		List<WebElement> names3 = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
 		int sizecheck3 = names3.size();
 		System.out.println(sizecheck3);
 
-		for (int i = 0; i < sizecheck3; i++) {
-			System.out.println(names3.get(i).getAttribute("content-desc"));
-			if(names3.get(i).getAttribute("content-desc").equals("Join the community"))
-			{
-				names3.get(i).click();
-				Thread.sleep(10000);
-				driver.navigate().back();
-				explicitwait1();
-				//driver.navigate().back();
+		try {
+
+			for (int i = 0; i < sizecheck3; i++) {
+				System.out.println(names3.get(i).getAttribute("content-desc"));
+				if (names3.get(i).getAttribute("content-desc").equals("Join the community")) {
+					names3.get(i).click();
+					Thread.sleep(10000);
+					driver.navigate().back();
+					explicitwait1();
+					// driver.navigate().back();
+				} else {
+					names3.get(i).click();
+					explicitwait();
+					driver.navigate().back();
+				}
 			}
-			else {
-			names3.get(i).click();
-			explicitwait();
-			driver.navigate().back();
-			}
+
+		} catch (Exception e) {
+			System.out.println("Array not found");
 		}
 
 		explicitwait();
-	//	driver.quit();
+		// driver.quit();
 
 	}
 
-//------------------------------------------------------------------------------------------------------------------------------------	
+ 	@Test(priority = 10)
+	public void layoutEverythingButtonClickDeom() throws InterruptedException {
+
+		scrollScreenUp40();
+
+		explicitwait1();
+		
+		int loop = 1;
+		
+		do {
+		
+				List<WebElement> block = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
+				System.out.println(block.size());
+
+				for (int i = 1; i < block.size()-1; i++) {
+					System.out.println(block.get(i).getAttribute("content-desc"));
+					if (block.get(i).getAttribute("content-desc").equals("Join the community")) {
+						block.get(i).click();
+						Thread.sleep(10000);
+						driver.navigate().back();
+						explicitwait();
+						driver.navigate().back();
+					} else {
+						block.get(i).click();
+						Thread.sleep(10000);
+						driver.navigate().back();
+						explicitwait();
+					}
+				}
+				
+				scrollScreenUp80();
+			
+				loop++;
+		} while (loop<=3);
+
+	}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
 
 	public void implicitwait() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -299,7 +320,7 @@ public class HomeScreen extends CapabalitiesDirect {
 
 	public void explicitwait() throws InterruptedException {
 
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 	}
 
@@ -323,7 +344,7 @@ public class HomeScreen extends CapabalitiesDirect {
 				.perform();
 
 	}
-	
+
 	public void scrollScreenUp80() throws InterruptedException {
 
 		explicitwait();
@@ -386,7 +407,7 @@ public class HomeScreen extends CapabalitiesDirect {
 		touchAction.longPress(PointOption.point(startx, starty)).moveTo(PointOption.point(endx, starty)).release()
 				.perform();
 
-		explicitwait();
+		explicitwait1();
 
 	}
 

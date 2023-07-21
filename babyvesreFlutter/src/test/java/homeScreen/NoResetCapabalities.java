@@ -24,9 +24,9 @@ public class NoResetCapabalities {
 					
 						dc.setCapability("platformName", "Android");
 					
-						dc.setCapability("platformVersion", "10.0");
+						dc.setCapability("platformVersion", "13.0");
 					
-						dc.setCapability("deviceName", "9bd08399");
+						dc.setCapability("deviceName", "RZ8T81PTRKN");
 				
 						dc.setCapability("noReset", "true");
 						
@@ -40,7 +40,7 @@ public class NoResetCapabalities {
 						
 						driver = new AndroidDriver(url,dc);
 						
-						Thread.sleep(10000);
+						Thread.sleep(15000);
 	}
 
 }

@@ -5,8 +5,7 @@
     <classes>
       <class name="homeScreen.HomeScreen">
         <methods>
-          <include name="layoutParentsButtonClick"/>
-          <include name="layoutSpeciallyButtonClick"/>
+          <include name="clickOnUpgradeIcon"/>
         </methods>
       </class> <!-- homeScreen.HomeScreen -->
     </classes>
