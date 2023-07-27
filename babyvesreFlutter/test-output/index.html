@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Savycode\AppData\Local\Temp\testng-eclipse-1416240758\testng-customsuite.xml</span>
+                    <span>C:\Users\Savycode\AppData\Local\Temp\testng-eclipse--532463753\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homeScreen.HomeScreen" class="method navigator-link" hash-for-method="clickOnUpgradeIcon">clickOnUpgradeIcon</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="userSettingScreen.AddanotherChild" class="method navigator-link" hash-for-method="clickonHint">clickonHint</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -118,22 +118,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homeScreen.HomeScreen" class="method navigator-link" hash-for-method="clickOnHomeTab">clickOnHomeTab</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="userSettingScreen.AddanotherChild" class="method navigator-link" hash-for-method="clickonGender">clickonGender</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homeScreen.HomeScreen" class="method navigator-link" hash-for-method="clickOnSetting">clickOnSetting</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homeScreen.HomeScreen" class="method navigator-link" hash-for-method="layoutEverythingButtonClickDeom">layoutEverythingButtonClickDeom</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homeScreen.HomeScreen" class="method navigator-link" hash-for-method="splachScreen">splachScreen</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="userSettingScreen.AddanotherChild" class="method navigator-link" hash-for-method="splachScreen">splachScreen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -151,22 +141,50 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">homeScreen.HomeScreen</span>
+              <span class="class-name">userSettingScreen.AddanotherChild</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clickOnUpgradeIcon">
-                  </a> <!-- clickOnUpgradeIcon -->
-                  <span class="method-name">clickOnUpgradeIcon</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Upgrade to Premium] but found [null]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at homeScreen.HomeScreen.clickOnUpgradeIcon(HomeScreen.java:87)
+                  <a name="clickonHint">
+                  </a> <!-- clickonHint -->
+                  <span class="method-name">clickonHint</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AKHILESH&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 29, deviceManufacturer: realme, deviceModel: RMX1925, deviceName: 9bd08399, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9bd08399, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 56, takesScreenshot: true, viewportRect: {height: 1400, left: 0, top: 56, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 96993463-5add-400f-82a5-c27d1ce6c10f
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@index=&apos;4&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at userSettingScreen.AddanotherChild.clickonHint(AddanotherChild.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -204,28 +222,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">homeScreen.HomeScreen</span>
+              <span class="class-name">userSettingScreen.AddanotherChild</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clickOnHomeTab">
-                  </a> <!-- clickOnHomeTab -->
-                  <span class="method-name">clickOnHomeTab</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickOnSetting">
-                  </a> <!-- clickOnSetting -->
-                  <span class="method-name">clickOnSetting</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="layoutEverythingButtonClickDeom">
-                  </a> <!-- layoutEverythingButtonClickDeom -->
-                  <span class="method-name">layoutEverythingButtonClickDeom</span>
+                  <a name="clickonGender">
+                  </a> <!-- clickonGender -->
+                  <span class="method-name">clickonGender</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -240,7 +244,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Savycode\AppData\Local\Temp\testng-eclipse-1416240758\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Savycode\AppData\Local\Temp\testng-eclipse--532463753\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -249,7 +253,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;homeScreen.HomeScreen&quot;/&gt;
+      &lt;class name=&quot;userSettingScreen.AddanotherChild&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -289,32 +293,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'layoutEverythingButtonClickDeom')
-data.setCell(0, 2, 'homeScreen.HomeScreen')
-data.setCell(0, 3, 502113);
+data.setCell(0, 1, 'splachScreen')
+data.setCell(0, 2, 'userSettingScreen.AddanotherChild')
+data.setCell(0, 3, 19119);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'splachScreen')
-data.setCell(1, 2, 'homeScreen.HomeScreen')
-data.setCell(1, 3, 30898);
+data.setCell(1, 1, 'clickonGender')
+data.setCell(1, 2, 'userSettingScreen.AddanotherChild')
+data.setCell(1, 3, 4502);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'clickOnSetting')
-data.setCell(2, 2, 'homeScreen.HomeScreen')
-data.setCell(2, 3, 17609);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'clickOnUpgradeIcon')
-data.setCell(3, 2, 'homeScreen.HomeScreen')
-data.setCell(3, 3, 10483);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'clickOnHomeTab')
-data.setCell(4, 2, 'homeScreen.HomeScreen')
-data.setCell(4, 3, 4667);
+data.setCell(2, 1, 'clickonHint')
+data.setCell(2, 2, 'userSettingScreen.AddanotherChild')
+data.setCell(2, 3, 3278);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -340,28 +336,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">homeScreen.HomeScreen</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">userSettingScreen.AddanotherChild</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">splachScreen</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">clickOnHomeTab</span>
-                <span class="method-start">30902 ms</span>
+                <span class="method-name">clickonGender</span>
+                <span class="method-start">19124 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">clickOnUpgradeIcon</span>
-                <span class="method-start">35570 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">clickOnSetting</span>
-                <span class="method-start">46057 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">layoutEverythingButtonClickDeom</span>
-                <span class="method-start">63667 ms</span>
+                <span class="method-name">clickonHint</span>
+                <span class="method-start">23627 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

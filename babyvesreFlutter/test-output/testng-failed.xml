@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="homeScreen.HomeScreen">
+      <class name="userSettingScreen.AddanotherChild">
         <methods>
-          <include name="clickOnUpgradeIcon"/>
+          <include name="clickonHint"/>
         </methods>
-      </class> <!-- homeScreen.HomeScreen -->
+      </class> <!-- userSettingScreen.AddanotherChild -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,34 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-21T18:02:22 IST" name="Default suite" finished-at="2023-07-21T18:11:48 IST" duration-ms="565814">
+  <suite started-at="2023-07-27T15:09:18 IST" name="Default suite" finished-at="2023-07-27T15:09:45 IST" duration-ms="26934">
     <groups>
     </groups>
-    <test started-at="2023-07-21T18:02:22 IST" name="Default test" finished-at="2023-07-21T18:11:48 IST" duration-ms="565814">
-      <class name="homeScreen.HomeScreen">
-        <test-method signature="splachScreen()[pri:1, instance:homeScreen.HomeScreen@7690781]" started-at="2023-07-21T18:02:22 IST" name="splachScreen" finished-at="2023-07-21T18:02:53 IST" duration-ms="30898" status="PASS">
+    <test started-at="2023-07-27T15:09:18 IST" name="Default test" finished-at="2023-07-27T15:09:45 IST" duration-ms="26934">
+      <class name="userSettingScreen.AddanotherChild">
+        <test-method signature="splachScreen()[pri:1, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:18 IST" name="splachScreen" finished-at="2023-07-27T15:09:37 IST" duration-ms="19119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- splachScreen -->
-        <test-method signature="clickOnHomeTab()[pri:2, instance:homeScreen.HomeScreen@7690781]" started-at="2023-07-21T18:02:53 IST" name="clickOnHomeTab" finished-at="2023-07-21T18:02:57 IST" duration-ms="4667" status="PASS">
+        <test-method signature="clickonGender()[pri:20, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:37 IST" name="clickonGender" finished-at="2023-07-27T15:09:42 IST" duration-ms="4502" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnHomeTab -->
-        <test-method signature="clickOnUpgradeIcon()[pri:4, instance:homeScreen.HomeScreen@7690781]" started-at="2023-07-21T18:02:57 IST" name="clickOnUpgradeIcon" finished-at="2023-07-21T18:03:08 IST" duration-ms="10483" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- clickonGender -->
+        <test-method signature="clickonHint()[pri:22, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:42 IST" name="clickonHint" finished-at="2023-07-27T15:09:45 IST" duration-ms="3278" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Upgrade to Premium] but found [null]]]>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AKHILESH', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 29, deviceManufacturer: realme, deviceModel: RMX1925, deviceName: 9bd08399, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9bd08399, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 56, takesScreenshot: true, viewportRect: {height: 1400, left: 0, top: 56, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 96993463-5add-400f-82a5-c27d1ce6c10f
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@index='4']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Upgrade to Premium] but found [null]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at homeScreen.HomeScreen.clickOnUpgradeIcon(HomeScreen.java:87)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AKHILESH', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 29, deviceManufacturer: realme, deviceModel: RMX1925, deviceName: 9bd08399, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9bd08399, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 56, takesScreenshot: true, viewportRect: {height: 1400, left: 0, top: 56, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 96993463-5add-400f-82a5-c27d1ce6c10f
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@index='4']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at userSettingScreen.AddanotherChild.clickonHint(AddanotherChild.java:61)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,19 +94,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnUpgradeIcon -->
-        <test-method signature="clickOnSetting()[pri:5, instance:homeScreen.HomeScreen@7690781]" started-at="2023-07-21T18:03:08 IST" name="clickOnSetting" finished-at="2023-07-21T18:03:26 IST" duration-ms="17609" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnSetting -->
-        <test-method signature="layoutEverythingButtonClickDeom()[pri:10, instance:homeScreen.HomeScreen@7690781]" started-at="2023-07-21T18:03:26 IST" name="layoutEverythingButtonClickDeom" finished-at="2023-07-21T18:11:48 IST" duration-ms="502113" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- layoutEverythingButtonClickDeom -->
-      </class> <!-- homeScreen.HomeScreen -->
+        </test-method> <!-- clickonHint -->
+      </class> <!-- userSettingScreen.AddanotherChild -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
