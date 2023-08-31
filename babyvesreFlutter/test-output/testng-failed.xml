@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userSettingScreen.AddanotherChild">
+      <class name="forgotPin.ForgotPin">
         <methods>
-          <include name="clickonHint"/>
+          <include name="nonRegisterNumber"/>
         </methods>
-      </class> <!-- userSettingScreen.AddanotherChild -->
+      </class> <!-- forgotPin.ForgotPin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

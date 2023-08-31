@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-27T15:09:18 IST" name="Default suite" finished-at="2023-07-27T15:09:45 IST" duration-ms="26934">
+  <suite started-at="2023-08-31T15:56:09 IST" name="Default suite" finished-at="2023-08-31T15:57:42 IST" duration-ms="92344">
     <groups>
     </groups>
-    <test started-at="2023-07-27T15:09:18 IST" name="Default test" finished-at="2023-07-27T15:09:45 IST" duration-ms="26934">
-      <class name="userSettingScreen.AddanotherChild">
-        <test-method signature="splachScreen()[pri:1, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:18 IST" name="splachScreen" finished-at="2023-07-27T15:09:37 IST" duration-ms="19119" status="PASS">
+    <test started-at="2023-08-31T15:56:09 IST" name="Default test" finished-at="2023-08-31T15:57:42 IST" duration-ms="92344">
+      <class name="forgotPin.ForgotPin">
+        <test-method signature="splachScreen()[pri:1, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:09 IST" name="splachScreen" finished-at="2023-08-31T15:56:28 IST" duration-ms="19059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- splachScreen -->
-        <test-method signature="clickonGender()[pri:20, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:37 IST" name="clickonGender" finished-at="2023-07-27T15:09:42 IST" duration-ms="4502" status="PASS">
+        <test-method signature="selectMobileNumberfromPopup()[pri:4, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:28 IST" name="selectMobileNumberfromPopup" finished-at="2023-08-31T15:56:36 IST" duration-ms="7801" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickonGender -->
-        <test-method signature="clickonHint()[pri:22, instance:userSettingScreen.AddanotherChild@1649b0e6]" started-at="2023-07-27T15:09:42 IST" name="clickonHint" finished-at="2023-07-27T15:09:45 IST" duration-ms="3278" status="FAIL">
+        </test-method> <!-- selectMobileNumberfromPopup -->
+        <test-method signature="clickOnFogotonLogin()[pri:5, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:36 IST" name="clickOnFogotonLogin" finished-at="2023-08-31T15:56:39 IST" duration-ms="2716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnFogotonLogin -->
+        <test-method signature="selectMobileNumberfromPopup2()[pri:6, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:39 IST" name="selectMobileNumberfromPopup2" finished-at="2023-08-31T15:56:46 IST" duration-ms="7592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMobileNumberfromPopup2 -->
+        <test-method signature="clickandEnterOTP()[pri:8, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:46 IST" name="clickandEnterOTP" finished-at="2023-08-31T15:56:58 IST" duration-ms="11259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickandEnterOTP -->
+        <test-method signature="nonRegisterNumber()[pri:9, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:56:58 IST" name="nonRegisterNumber" finished-at="2023-08-31T15:57:12 IST" duration-ms="14100" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'AKHILESH', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'AKHILESH', ip: '192.168.0.112', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 29, deviceManufacturer: realme, deviceModel: RMX1925, deviceName: 9bd08399, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9bd08399, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 56, takesScreenshot: true, viewportRect: {height: 1400, left: 0, top: 56, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 96993463-5add-400f-82a5-c27d1ce6c10f
-*** Element info: {Using=xpath, value=//android.widget.ImageView[@index='4']}]]>
+Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 33, deviceManufacturer: samsung, deviceModel: SM-M135FU, deviceName: RZ8T81PTRKN, deviceScreenDensity: 450, deviceScreenSize: 1080x2408, deviceUDID: RZ8T81PTRKN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2141, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 83dfbe33-f20c-4e2a-ba18-a0532422f12e
+*** Element info: {Using=accessibility id, value=Send OTP}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'AKHILESH', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'AKHILESH', ip: '192.168.0.112', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 29, deviceManufacturer: realme, deviceModel: RMX1925, deviceName: 9bd08399, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9bd08399, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 56, takesScreenshot: true, viewportRect: {height: 1400, left: 0, top: 56, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 96993463-5add-400f-82a5-c27d1ce6c10f
-*** Element info: {Using=xpath, value=//android.widget.ImageView[@index='4']}
+Capabilities {databaseEnabled: false, desired: {platformName: android}, deviceApiLevel: 33, deviceManufacturer: samsung, deviceModel: SM-M135FU, deviceName: RZ8T81PTRKN, deviceScreenDensity: 450, deviceScreenSize: 1080x2408, deviceUDID: RZ8T81PTRKN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2141, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 83dfbe33-f20c-4e2a-ba18-a0532422f12e
+*** Element info: {Using=accessibility id, value=Send OTP}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -54,16 +66,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at userSettingScreen.AddanotherChild.clickonHint(AddanotherChild.java:61)
+at io.appium.java_client.FindsByAccessibilityId.findElementByAccessibilityId(FindsByAccessibilityId.java:37)
+at forgotPin.ForgotPin.nonRegisterNumber(ForgotPin.java:124)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -97,8 +101,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickonHint -->
-      </class> <!-- userSettingScreen.AddanotherChild -->
+        </test-method> <!-- nonRegisterNumber -->
+        <test-method signature="clickOnPin()[pri:10, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:57:12 IST" name="clickOnPin" finished-at="2023-08-31T15:57:22 IST" duration-ms="9795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnPin -->
+        <test-method signature="clickOnConfirmPin()[pri:11, instance:forgotPin.ForgotPin@7690781]" started-at="2023-08-31T15:57:22 IST" name="clickOnConfirmPin" finished-at="2023-08-31T15:57:42 IST" duration-ms="19975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnConfirmPin -->
+      </class> <!-- forgotPin.ForgotPin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

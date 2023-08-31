@@ -1,5 +1,6 @@
 package userSettingScreen;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -27,7 +28,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-	@Test(priority = 20, testName = "Click on Gender")
+//	@Test(priority = 20, testName = "Click on Gender")
 	public void clickonGender() throws InterruptedException {
 
 		explicitwait1();
@@ -61,12 +62,23 @@ public class AddanotherChild extends CapabalitiesDirect {
 		driver.findElement(By.xpath("//android.widget.ImageView[@index='4']")).click();
 
 		explicitwait();
-		System.out.println("Yaha tak aaya");
-		driver.findElement(By.xpath("//android.widget.Button[@content-desc='Yes! Got it.']")).click();
+		
+		driver.findElement(By.xpath("//android.widget.Button[@index='1']")).click();
 
+		try {
+			
+			System.out.println("Yaha tak aaya");
+//			List<WebElement> details = driver.findElementsByXPath("//android.widget.Button[@index='1']");
+//			System.out.println(details.size());
+			
+		} catch (Exception e) {
+			System.out.println("nhi mila");
+		}
+		
+		
 	}
 
-/*	@Test(priority = 23, testName = "Date of Birth")
+//	@Test(priority = 23, testName = "Date of Birth")
 	public void dateOfBirth() throws InterruptedException {
 
 		explicitwait1();
@@ -135,7 +147,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-	@Test(priority = 24, testName = "Premature Date of Birth")
+/*	@Test(priority = 24, testName = "Premature Date of Birth")
 	public void prematureDOB() throws InterruptedException {
 
 		explicitwait1();

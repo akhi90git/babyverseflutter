@@ -1,23 +1,24 @@
-package userSettingScreen;
+package happyFlow;
 
 import java.io.IOException;
 import java.net.URL;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 
 public class CapabalitiesDirect {
 
-	AndroidDriver driver; // set the driver here 
+	AndroidDriver driver;
 
-	@BeforeClass
+	@Test(priority = 1)
 	public void splachScreen() throws IOException, InterruptedException {
+
+		Thread.sleep(5000);	
 			
-		DesiredCapabilities dc = new DesiredCapabilities(); // 
+		DesiredCapabilities dc = new DesiredCapabilities();
 
 //		dc.setCapability("automationName", "UiAutomator2");
 //

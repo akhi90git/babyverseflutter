@@ -15,7 +15,7 @@ import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class LoginScreen extends StoryScreen {
-
+	
 //	@Test(priority = 3, testName = "Country Code")
 	public void clickOnCountryCode() throws IOException, InterruptedException {
 

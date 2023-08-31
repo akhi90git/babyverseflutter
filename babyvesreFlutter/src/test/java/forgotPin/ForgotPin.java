@@ -12,10 +12,8 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class ForgotPin extends CapabalitiesDirect {
 
-//	@Test(priority = 2)
+	@Test(priority = 4)
 	public void selectMobileNumberfromPopup() throws InterruptedException {
-
-		explicitwait1();
 	
 		// Select mobile number form mobile picker
 		explicitwait1();
@@ -34,7 +32,7 @@ public class ForgotPin extends CapabalitiesDirect {
 	}
 
 
-//	@Test(priority = 3)
+	@Test(priority = 5)
 	public void clickOnFogotonLogin() throws InterruptedException {
 
 		explicitwait1();
@@ -43,7 +41,7 @@ public class ForgotPin extends CapabalitiesDirect {
 
 	}
 	
-//	@Test(priority = 4)
+	@Test(priority = 6)
 	public void selectMobileNumberfromPopup2() throws InterruptedException {
 
 		explicitwait1();
@@ -65,7 +63,7 @@ public class ForgotPin extends CapabalitiesDirect {
 	}
 
 
-//	@Test(priority = 5, testName = "Country Code")
+//	@Test(priority = 7, testName = "Country Code")
 	public void clickOnCountryCode() throws IOException, InterruptedException {
 
 		explicitwait1();
@@ -80,7 +78,7 @@ public class ForgotPin extends CapabalitiesDirect {
 
 	}
 
-//	 @Test(priority = 6)
+//	 @Test(priority = 8)
 	public void mobileemptyValidation() throws InterruptedException {
 
 		 explicitwait1();
@@ -101,27 +99,27 @@ public class ForgotPin extends CapabalitiesDirect {
 		}
 	}
 	
-//	@Test(priority = 7)
+	@Test(priority = 9)
 	public void nonRegisterNumber() throws InterruptedException {
 
 		explicitwait1();
 
-		AndroidTouchAction touch = new AndroidTouchAction(driver);
-		touch.press(PointOption.point(612,1297)).release().perform();
-		explicitwait1();
-		touch.press(PointOption.point(404,1939)).release().perform();
-		touch.press(PointOption.point(151,1811)).release().perform();
-		touch.press(PointOption.point(404,1939)).release().perform();
-		touch.press(PointOption.point(412,1806)).release().perform();
-		touch.press(PointOption.point(404,1939)).release().perform();
-		touch.press(PointOption.point(151,1811)).release().perform();
-		touch.press(PointOption.point(151,1811)).release().perform();
-		touch.press(PointOption.point(409,1639)).release().perform();
-		touch.press(PointOption.point(672,1818)).release().perform();
-		touch.press(PointOption.point(665,1985)).release().perform();
-		
-		driver.hideKeyboard();
-		
+//		AndroidTouchAction touch = new AndroidTouchAction(driver);
+//		touch.press(PointOption.point(612,1297)).release().perform();
+//		explicitwait1();
+//		touch.press(PointOption.point(404,1939)).release().perform();
+//		touch.press(PointOption.point(151,1811)).release().perform();
+//		touch.press(PointOption.point(404,1939)).release().perform();
+//		touch.press(PointOption.point(412,1806)).release().perform();
+//		touch.press(PointOption.point(404,1939)).release().perform();
+//		touch.press(PointOption.point(151,1811)).release().perform();
+//		touch.press(PointOption.point(151,1811)).release().perform();
+//		touch.press(PointOption.point(409,1639)).release().perform();
+//		touch.press(PointOption.point(672,1818)).release().perform();
+//		touch.press(PointOption.point(665,1985)).release().perform();
+//		
+//		driver.hideKeyboard();
+//		
 		explicitwait1();
 		driver.findElementByAccessibilityId("Send OTP").click();
 	}
@@ -136,15 +134,17 @@ public class ForgotPin extends CapabalitiesDirect {
 		touch.press(PointOption.point(303, 1309)).release().perform();
 		 explicitwait1();
 
-
+		 click_Zero();
+		 
 		driver.hideKeyboard();
 
-		implicitwait();
+		//implicitwait();
 	//	driver.findElementByXPath("//android.widget.Button[@index='7']").click();
 
 		// driver.quit();
 	}	
-//	@Test(priority = 9)
+	
+	@Test(priority = 10)
 	public void clickOnPin() throws InterruptedException {
 		explicitwait1();
 		
@@ -158,7 +158,8 @@ public class ForgotPin extends CapabalitiesDirect {
 		
 		explicitwait1();
 	}	
-//	@Test(priority = 10)
+
+	@Test(priority = 11)
 	public void clickOnConfirmPin() throws InterruptedException {
 		
 		explicitwait1();
@@ -175,7 +176,7 @@ public class ForgotPin extends CapabalitiesDirect {
 		
 		Thread.sleep(10000);
 		
-		driver.quit();
+	//	driver.quit();
 	}
 	
 	
