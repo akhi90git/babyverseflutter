@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="forgotPin.ForgotPin">
+      <class name="homeScreen.HomeScreen">
         <methods>
-          <include name="nonRegisterNumber"/>
+          <include name="layoutEverythingButtonClickDeom"/>
         </methods>
-      </class> <!-- forgotPin.ForgotPin -->
+      </class> <!-- homeScreen.HomeScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

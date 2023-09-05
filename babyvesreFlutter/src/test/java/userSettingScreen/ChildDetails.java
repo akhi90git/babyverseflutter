@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
 
-public class ChildDetails extends NoResetCapabalities{
+public class ChildDetails extends CapabalitiesDirect{
 
 	@Test()
 	public void clickOnDetailsbutton() {

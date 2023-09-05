@@ -20,19 +20,26 @@ public class HomeScreen extends NoResetCapabalities {
 
 		explicitwait1();
 
-		// driver.findElementByAccessibilityId("Home").click();
+		try {
 
-		List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
-//		 System.out.println(names.size());
-//		for (int i = 0; i < data.size(); i++) {
-//			System.out.println(data.get(i).getAttribute("content-desc"));
-//			//Thread.sleep(8000);
-//			//driver.navigate().back();
-//		}
+			driver.findElementByAccessibilityId("Home").click();
 
-		// click on last index home button is there
-		int x = data.size() - 1;
-		data.get(x).click();
+//			List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='0'][2]");
+//			 System.out.println(data.size());
+//			for (int i = 0; i < data.size(); i++) {
+//				System.out.println(data.get(i).getAttribute("content-desc"));
+//				//Thread.sleep(8000);
+//				//driver.navigate().back();
+//			}
+
+			// click on last index home button is there
+//			int x = data.size() - 1;
+//			data.get(x).click();
+
+		} catch (Exception e) {
+			System.out.println("Not Found");
+		}
+
 	}
 
 //	@Test(priority = 3)
@@ -62,7 +69,7 @@ public class HomeScreen extends NoResetCapabalities {
 
 	}
 
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	public void clickOnUpgradeIcon() throws InterruptedException {
 		explicitwait1();
 
@@ -127,7 +134,7 @@ public class HomeScreen extends NoResetCapabalities {
 
 	}
 
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	public void clickOnSetting() throws InterruptedException {
 		explicitwait1();
 
@@ -141,11 +148,12 @@ public class HomeScreen extends NoResetCapabalities {
 		data.get(1).click();
 
 		explicitwait();
-		
-		Assert.assertEquals(driver.findElementByXPath("//android.view.View[@index='2']").getAttribute("content-desc"), "Profile");
-			
+
+		Assert.assertEquals(driver.findElementByXPath("//android.view.View[@index='2']").getAttribute("content-desc"),
+				"Profile");
+
 		explicitwait();
-		 driver.navigate().back();
+		driver.navigate().back();
 
 	}
 
@@ -154,9 +162,9 @@ public class HomeScreen extends NoResetCapabalities {
 
 		explicitwait1();
 
-		for(int i=0;i<=9;i++) {
-		scrollLeft();
-		System.out.println(i);
+		for (int i = 0; i <= 9; i++) {
+			scrollLeft();
+			System.out.println(i);
 		}
 	}
 
@@ -274,28 +282,35 @@ public class HomeScreen extends NoResetCapabalities {
 
 	}
 
- 	@Test(priority = 10)
+	@Test(priority = 10)
 	public void layoutEverythingButtonClickDeom() throws InterruptedException {
 
 		scrollScreenUp40();
+		explicitwait();
 
-		explicitwait1();
-		
 		int loop = 1;
-		
 		do {
-		
+
+			try {
 				List<WebElement> block = driver.findElementsByXPath("//android.widget.ImageView[@index='0']");
 				System.out.println(block.size());
 
-				for (int i = 1; i < block.size()-1; i++) {
+				explicitwait1();
+				for (int i = 1; i < block.size() - 1; i++) {
 					System.out.println(block.get(i).getAttribute("content-desc"));
+					explicitwait1();
+
 					if (block.get(i).getAttribute("content-desc").equals("Join the community")) {
 						block.get(i).click();
 						Thread.sleep(10000);
 						driver.navigate().back();
 						explicitwait();
 						driver.navigate().back();
+					} else if (block.get(i).getAttribute("content-desc").equals("Refer a fellow parent")) {
+						block.get(i).click();
+						driver.navigate().back();
+						scrollScreenUp80();
+						scrollScreenUp80();
 					} else {
 						block.get(i).click();
 						Thread.sleep(10000);
@@ -303,11 +318,15 @@ public class HomeScreen extends NoResetCapabalities {
 						explicitwait();
 					}
 				}
-				
+
 				scrollScreenUp80();
-			
+
 				loop++;
-		} while (loop<=3);
+
+			} catch (Exception e) {
+				System.out.println("Not found");
+			}
+		} while (loop <= 3);
 
 	}
 

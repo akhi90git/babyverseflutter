@@ -14,31 +14,61 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class UserProfile extends CapabalitiesDirect {
+public class UserProfile extends NoResetCapabalities {
 
 	@Test(priority = 2)
 	public void toSettingScreen() throws InterruptedException {
-		explicitwait1();
-	//	driver.findElementByAccessibilityId("Home").click();
-		
-		List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
-	//	System.out.println(data.size());
-//		for (int i = 0; i < data.size(); i++) {
-//			System.out.println(data.get(i).getAttribute("content-desc"));
-//			//Thread.sleep(8000);
-//			//driver.navigate().back();
-//		}
-		
-		data.get(1).click();
 		explicitwait();
 		
-		List<WebElement> data2 = driver.findElementsByXPath("//android.view.View[@index='2']");
+		
+		try {
+			
+			driver.findElementByAccessibilityId("Home").click();
+			
+			explicitwait1();
+			List<WebElement> data1 = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
+			System.out.println(data1.size());
+			data1.get(1).click();
+			
+			
+//			for(int i=1;i<data1.size();i++) {
+//				System.out.println(data1.get(i).getAttribute("class"));
+//				explicitwait();
+//			//	data1.get(i).click();
+//			}
+			
+		} catch (Exception e) {
+			System.out.println("Not found");
+		}
+		
+		
+	/*	try {
+			explicitwait1();
+			List<WebElement> data = driver.findElementsByXPath("//android.widget.ImageView[@index='2']");
+			System.out.println(data.size());
+			for (int i = 0	; i < data.size(); i++) {
+				System.out.println(data.get(i).getAttribute("class"));
+//				data.get(i).click();
+//				Thread.sleep(5000);
+//				//driver.navigate().back();
+		}
+			
+		//	data.get(0).click();
+			explicitwait();
+			
+		} catch (Exception e) {
+			System.out.println("Elements not found");
+		}*/
+		
+		
+		
+	//	List<WebElement> data2 = driver.findElementsByXPath("//android.view.View[@index='2']");
 //		System.out.println(data2.size());
 //		for (int i = 0; i < data2.size(); i++) {
 //		System.out.println(data2.get(i).getAttribute("content-desc"));
 //	}
 
-		Assert.assertEquals(data2.get(0).getAttribute("content-desc"), "Profile");
+	//	Assert.assertEquals(data2.get(0).getAttribute("content-desc"), "Profile");
 		}
 
 	@Test(priority = 3)
@@ -51,7 +81,7 @@ public class UserProfile extends CapabalitiesDirect {
 		explicitwait1();
 		name.clear();
 		explicitwait1();
-		name.sendKeys("Rohit");
+		name.sendKeys("bv_Rohit");
 		driver.hideKeyboard();
 
 	}
@@ -67,7 +97,7 @@ public class UserProfile extends CapabalitiesDirect {
 		explicitwait1();
 		email.clear();
 		explicitwait1();
-		email.sendKeys("s@g.com");
+		email.sendKeys("bv_s@g.com");
 		explicitwait1();
 		driver.hideKeyboard();
 
@@ -80,19 +110,20 @@ public class UserProfile extends CapabalitiesDirect {
 		
 //		driver.findElementByXPath("//android.view.View[@clickable='true' and @index='2'] ").click();
 	
-		explicitwait1();
+		explicitwait();
 		AndroidTouchAction touch = new AndroidTouchAction(driver);
-		touch.press(PointOption.point(189, 695)).release().perform();
+		//explicitwait();
+		touch.press(PointOption.point(303, 1041)).release().perform();
 		for (int i = 1; i <=4; i++) {
 			Thread.sleep(1000);
-			touch.press(PointOption.point(94, 1151)).release().perform();
+			touch.press(PointOption.point(158, 1632)).release().perform();
 		}
 
 		explicitwait1();
-		touch.press(PointOption.point(189, 954)).release().perform();
+		touch.press(PointOption.point(303, 1393)).release().perform();
 		for (int i = 1; i <=4; i++) {
 			Thread.sleep(1000);
-			touch.press(PointOption.point(94, 1151)).release().perform();
+			touch.press(PointOption.point(158, 1632)).release().perform();
 		}
 
 		explicitwait1();

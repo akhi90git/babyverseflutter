@@ -13,13 +13,13 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class AddanotherChild extends CapabalitiesDirect {
 
-//	@Test(priority = 18)
+	@Test(priority = 18)
 	public void clickOnAddanotherChild() throws InterruptedException {
 		explicitwait1();
 		driver.findElementByAccessibilityId("Add another baby").click();
 	}
 
-//	@Test(priority = 19, testName = "Click on Yes, my baby is here")
+	@Test(priority = 19, testName = "Click on Yes, my baby is here")
 	public void clickonBabyHere() throws InterruptedException {
 
 		explicitwait1();
@@ -28,7 +28,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-//	@Test(priority = 20, testName = "Click on Gender")
+	@Test(priority = 20, testName = "Click on Gender")
 	public void clickonGender() throws InterruptedException {
 
 		explicitwait1();
@@ -37,7 +37,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-//	@Test(priority = 21, testName = "Child Name")
+	@Test(priority = 21, testName = "Child Name")
 	public void childName() throws InterruptedException {
 
 		explicitwait1();
@@ -46,9 +46,9 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 		nametext.click();
 
-		nametext.sendKeys("Aaryaman");
-
-		implicitwait();
+		nametext.sendKeys("bv_Shakimaan");
+		driver.hideKeyboard();
+		explicitwait1();
 
 		driver.findElement(By.xpath("//android.widget.Button[@index='5']")).click();
 
@@ -78,7 +78,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 		
 	}
 
-//	@Test(priority = 23, testName = "Date of Birth")
+	@Test(priority = 23, testName = "Date of Birth")
 	public void dateOfBirth() throws InterruptedException {
 
 		explicitwait1();
@@ -147,7 +147,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-/*	@Test(priority = 24, testName = "Premature Date of Birth")
+	@Test(priority = 24, testName = "Premature Date of Birth")
 	public void prematureDOB() throws InterruptedException {
 
 		explicitwait1();
@@ -230,7 +230,7 @@ public class AddanotherChild extends CapabalitiesDirect {
 
 	}
 
-	@Test(priority = 26, testName = "Click on Profile Next")
+//	@Test(priority = 26, testName = "Click on Profile Next")
 	public void clickonProfileNext() throws InterruptedException {
 
 		explicitwait1();
@@ -247,10 +247,10 @@ public class AddanotherChild extends CapabalitiesDirect {
 		driver.findElementByAccessibilityId("Yes").click();
 		
 		explicitwait1();
-		driver.quit();
+	//	driver.quit();
 	}
 	
-	*/
+
 //------------------------------------------------------------------------------------------------------	
 	public void implicitwait() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

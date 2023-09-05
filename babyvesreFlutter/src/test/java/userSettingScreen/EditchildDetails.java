@@ -11,7 +11,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class EditchildDetails extends CapabalitiesDirect {
+public class EditchildDetails extends UserProfile {
 
 	@Test(priority = 7)
 	public void clickOnDeatilsbutton() throws InterruptedException {
@@ -54,7 +54,7 @@ public class EditchildDetails extends CapabalitiesDirect {
 		WebElement babyname = driver.findElementByXPath("//android.widget.EditText[@index='4']");
 		babyname.click();
 		babyname.clear();
-		babyname.sendKeys("Renna");
+		babyname.sendKeys("bv_Rinna");
 		driver.hideKeyboard();
 	}
 
