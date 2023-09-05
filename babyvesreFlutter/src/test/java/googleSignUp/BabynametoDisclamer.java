@@ -1,4 +1,4 @@
-package signUpExpectedChild;
+package googleSignUp;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -16,78 +16,18 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class NametoDisclamer extends MobileAndPin {
+public class BabynametoDisclamer extends MobileAndPin {
 
-	@Test(priority = 17)
-	public void emptyNameValidation() throws InterruptedException {
-
-		explicitwait1();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		String validation = driver.findElementByAccessibilityId(" Enter your first name.")
-				.getAttribute("content-desc");
-		
-		// Check validation
-		Assert.assertEquals(validation, " Enter your first name.");
-	}
-
-	@Test(priority = 18)
-	public void addUserName() throws InterruptedException {
-		explicitwait1();
-
-		List<WebElement> textfiled = driver.findElementsByXPath("//android.widget.EditText[@index='0']");
-		// System.out.println(textfiled.size());
-		textfiled.get(0).click();
-		textfiled.get(0).sendKeys("Akhilesh");
-
-		driver.hideKeyboard();
-	}
-
-	@Test(priority = 19)
-	public void emptyEmailValidation() throws InterruptedException {
-		explicitwait1();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		// Check validation
-
-		String validation = driver.findElementByAccessibilityId("Please Enter Valid Email")
-				.getAttribute("content-desc");
-		
-		Assert.assertEquals(validation, "Please Enter Valid Email");
-	}
-
-	@Test(priority = 20)
-	public void addEmailId() throws InterruptedException {
-		explicitwait1();
-
-		List<WebElement> textfiled = driver.findElementsByXPath("//android.widget.EditText[@index='0']");
-		// System.out.println(textfiled.size());
-		textfiled.get(1).click();
-		textfiled.get(1).sendKeys("a@g.c");
-
-		driver.hideKeyboard();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		explicitwait1();
-
-	}
-
-	@Test(priority = 21)
+	@Test(priority = 6)
 	public void clickonBabyontheWay() throws InterruptedException {
 
-		explicitwait1();
+		Thread.sleep(10000);
 		// Select my baby is on the way
 		driver.findElementByXPath("//android.widget.ImageView[@index='4']").click();
 
 	}
 
-//	@Test(priority = 22)
+//	@Test(priority = 7)
 	public void clickonHint() throws InterruptedException {
 
 		explicitwait1();
@@ -100,7 +40,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 23)
+	@Test(priority = 8)
 	public void selectdateOfBirth() throws InterruptedException {
 
 		explicitwait1();
@@ -174,7 +114,7 @@ public class NametoDisclamer extends MobileAndPin {
 		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
 	}
 
-	@Test(priority = 24)
+	@Test(priority = 9)
 	public void clickOnRelation() throws InterruptedException {
 
 		explicitwait1();
@@ -184,7 +124,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 25)
+	@Test(priority = 10)
 	public void neverMissaMilestone() throws InterruptedException {
 
 		explicitwait1();
@@ -193,7 +133,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 	
-	@Test(priority = 26)
+	@Test(priority = 11)
 	public void planScreen() throws InterruptedException {
 		explicitwait1();
 
@@ -209,7 +149,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 27)
+	@Test(priority = 12)
 	public void notificationReminder() throws InterruptedException {
 		explicitwait();
 		try {
@@ -228,7 +168,7 @@ public class NametoDisclamer extends MobileAndPin {
 		}
 	}
 	
-	@Test(priority = 28)
+	@Test(priority = 13)
 	public void clickonDisclaimer() throws InterruptedException {
 
 		explicitwait();
@@ -249,7 +189,7 @@ public class NametoDisclamer extends MobileAndPin {
 		
 		explicitwait1();
 		
-	//	driver.quit();
+		driver.quit();
 
 	}
 

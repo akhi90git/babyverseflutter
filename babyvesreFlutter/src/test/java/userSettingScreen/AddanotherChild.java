@@ -1,4 +1,4 @@
-package signUpFlow;
+package userSettingScreen;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -7,165 +7,83 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.HidesKeyboard;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class NametoDisclamer extends MobileAndPin {
-
-	@Test(priority = 16)
-	public void emptyNameValidation() throws InterruptedException {
-
-		explicitwait1();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		// Check validation
-
-		String validation = driver.findElementByAccessibilityId(" Enter your first name.").getAttribute("content-desc");
-		// System.out.println(validation);
-
-		if (validation.equals(" Enter your first name.")) {
-			System.out.println(" Enter your first name. Matched");
-		} else {
-			System.out.println(" Enter your first name. not Matched");
-		}
-
-	}
-
-	@Test(priority = 17)
-	public void addUserName() throws InterruptedException {
-		explicitwait1();
-
-		List<WebElement> textfiled = driver.findElementsByXPath("//android.widget.EditText[@index='0']");
-	//	System.out.println(textfiled.size());
-		textfiled.get(0).click();
-		textfiled.get(0).sendKeys("Akhilesh");
-
-		driver.hideKeyboard();
-	}
+public class AddanotherChild extends CapabalitiesDirect {
 
 	@Test(priority = 18)
-	public void emptyEmailValidation() throws InterruptedException {
+	public void clickOnAddanotherChild() throws InterruptedException {
 		explicitwait1();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		// Check validation
-
-		String validation = driver.findElementByAccessibilityId("Please Enter Valid Email")
-				.getAttribute("content-desc");
-		// System.out.println(validation);
-
-		if (validation.equals("Please Enter Valid Email")) {
-			System.out.println("Please Enter Valid Email Matched");
-		} else {
-			System.out.println("Please Enter Valid Email not Matched");
-		}
+		driver.findElementByAccessibilityId("Add another baby").click();
 	}
 
-	@Test(priority = 19)
-	public void addEmailId() throws InterruptedException {
-		explicitwait1();
-
-		List<WebElement> textfiled = driver.findElementsByXPath("//android.widget.EditText[@index='0']");
-	//	System.out.println(textfiled.size());
-		textfiled.get(1).click();
-		textfiled.get(1).sendKeys("a@g.c");
-
-		driver.hideKeyboard();
-
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='10']").click();
-
-		explicitwait1();
-
-	}
-
-	@Test(priority = 20)
+	@Test(priority = 19, testName = "Click on Yes, my baby is here")
 	public void clickonBabyHere() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElementByXPath("//android.widget.ImageView[@index='3']").click();
-		// driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='Yes,
-		// my baby is here.']")).click();
+		driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='Yes, my baby is here.']")).click();
 
 	}
 
-	@Test(priority = 21)
+	@Test(priority = 20, testName = "Click on Gender")
 	public void clickonGender() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElement(By.xpath("//android.widget.ImageView[@index='3']")).click();
+		driver.findElement(By.xpath("//android.widget.ImageView[@index='4']")).click();
 
 	}
 
-	 @Test(priority = 22)
-	public void emptychildNameValidation() throws InterruptedException {
+	@Test(priority = 21, testName = "Child Name")
+	public void childName() throws InterruptedException {
 
 		explicitwait1();
 
-		// Click on Next button
-		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
+		WebElement nametext = driver.findElement(By.xpath("//android.widget.EditText[@index='3']"));
 
-		// Check validation
+		nametext.click();
 
-		String validation = driver.findElementByAccessibilityId("Please Enter Valid Baby Name")
-				.getAttribute("content-desc");
-		// System.out.println(validation);
-
-		if (validation.equals("Please Enter Valid Baby Name")) {
-			System.out.println("Please Enter Valid Baby Name Matched");
-		} else {
-			System.out.println("Please Enter Valid Baby Name not matched");
-		}
-
-	}
-
-	@Test(priority = 23)
-	public void addchildName() throws InterruptedException {
-
-		explicitwait1();
-
-		List<WebElement> textfiled = driver.findElementsByXPath("//android.widget.EditText[@index='3']");
-		System.out.println(textfiled.size());
-		textfiled.get(0).click();
-		textfiled.get(0).sendKeys("Sonny");
-
+		nametext.sendKeys("bv_Shakimaan");
 		driver.hideKeyboard();
+		explicitwait1();
 
-		implicitwait();
-
-		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='5']")).click();
 
 	}
 
-	@Test(priority = 24)
+	@Test(priority = 22, testName = "Click on Hint")
 	public void clickonHint() throws InterruptedException {
 
 		explicitwait1();
 
 		driver.findElement(By.xpath("//android.widget.ImageView[@index='4']")).click();
 
-		implicitwait();
+		explicitwait();
+		
+		driver.findElement(By.xpath("//android.widget.Button[@index='1']")).click();
 
-		driver.findElement(By.xpath("//android.widget.Button[@content-desc='Yes! Got it.']")).click();
-
+		try {
+			
+			System.out.println("Yaha tak aaya");
+//			List<WebElement> details = driver.findElementsByXPath("//android.widget.Button[@index='1']");
+//			System.out.println(details.size());
+			
+		} catch (Exception e) {
+			System.out.println("nhi mila");
+		}
+		
+		
 	}
 
-	@Test(priority = 25)
-	public void selectdateOfBirth() throws InterruptedException {
+	@Test(priority = 23, testName = "Date of Birth")
+	public void dateOfBirth() throws InterruptedException {
 
 		explicitwait1();
 
 		driver.findElementByXPath("//android.widget.ImageView[@index='3']").click();
-
 		implicitwait();
 
 		// ************* Select Year************************
@@ -229,7 +147,7 @@ public class NametoDisclamer extends MobileAndPin {
 
 	}
 
-	@Test(priority = 26)
+	@Test(priority = 24, testName = "Premature Date of Birth")
 	public void prematureDOB() throws InterruptedException {
 
 		explicitwait1();
@@ -301,103 +219,49 @@ public class NametoDisclamer extends MobileAndPin {
 		driver.findElementByAccessibilityId("Select").click();
 
 		driver.findElementByAccessibilityId("Continue").click();
-
 	}
 
-	@Test(priority = 27)
+	@Test(priority = 25, testName = "Click on Relation")
 	public void clickOnRelation() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElementByAccessibilityId("Mother").click();
+		driver.findElementByAccessibilityId("Father").click();
 
 	}
 
-	@Test(priority = 28)
-	public void neverMissaMilestone() throws InterruptedException {
+//	@Test(priority = 26, testName = "Click on Profile Next")
+	public void clickonProfileNext() throws InterruptedException {
 
 		explicitwait1();
 
-		driver.findElementByXPath("//android.widget.Button[@index='5']").click();
+		driver.findElementByAccessibilityId("Next").click();
 
 	}
 
-	@Test(priority = 29)
-	public void planScreen() throws InterruptedException {
+	@Test(priority = 27)
+	public void clickOnLogout() throws InterruptedException {
 		explicitwait1();
+		driver.findElementByAccessibilityId("Log Out").click();
 		
-		driver.findElementByXPath("//android.widget.Button[@index='6']").click();
+		driver.findElementByAccessibilityId("Yes").click();
 		
-		explicitwait();
-		
-		driver.navigate().back();
-		
-		implicitwait();
-		
-		driver.findElementByXPath("//android.view.View[@index='7']").click();
-		
-		
+		explicitwait1();
+	//	driver.quit();
 	}
 	
-	@Test(priority = 30)
-	public void notificationReminder() throws InterruptedException {
-		explicitwait();
-		try {
-			
-			if(driver.findElementByAccessibilityId("Get timely reminders").isDisplayed()) {
-				explicitwait1();
-			//	System.out.println("Yaha tak aaya");
-				driver.findElementByAccessibilityId("Yes, Notify me").click();
-				explicitwait1();
-				driver.findElementById("com.android.permissioncontroller:id/permission_allow_button").click();
-				
-			}
-			
-		} catch (Exception e) {
-			System.out.println("Notification Reminder screen not found");
-		}
-	}
-	
-	@Test(priority = 31)
-	public void clickonDisclaimer() throws InterruptedException {
 
-		explicitwait();
-
-		driver.findElementByAccessibilityId("Proceed").click();
-
-		explicitwait1();
-		
-		driver.findElementByXPath("//android.widget.ImageView[@index='2']").click();
-		
-
-		driver.findElementByAccessibilityId("Proceed").click();
-		
-	}
-
-//-----------------------------------------------------------------------------------------------------------------------	
-
+//------------------------------------------------------------------------------------------------------	
 	public void implicitwait() {
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 	}
 
 	public void explicitwait() throws InterruptedException {
-
-		Thread.sleep(3000);
-
-	}
-
-	public void sleep_method() throws InterruptedException {
-
 		Thread.sleep(5000);
-
 	}
 
 	public void explicitwait1() throws InterruptedException {
-
-		Thread.sleep(2000);
-
+		Thread.sleep(3000);
 	}
 
 }
